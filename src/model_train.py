@@ -2,7 +2,7 @@ import numpy as np
 from keras_preprocessing.image import ImageDataGenerator
 from keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, Dropout
 from tensorflow.keras.models import Model
-from glob import glob  #to handle and transform data we use this
+from glob import glob
 import os
 import argparse
 from get_data import get_data, read_params
@@ -87,3 +87,4 @@ if __name__=='__main__':
     args.add_argument('--config',default='params.yaml')
     passed_args=args.parse_args()
     train_model(config_file=passed_args.config)
+    
